@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier « {{ movie.title }} » — CinéTech{% endblock %}
+
+{% block body %}
+    <div class="container py-5">
+        <h1 class="mb-4">Modifier « {{ movie.title }} »</h1>
+
+        {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+            {{ form_row(form.title) }}
+            {{ form_row(form.synopsis) }}
+            {{ form_row(form.duration) }}
+            {{ form_row(form.releaseDate) }}
+            {{ form_row(form.pressRating) }}
+            {{ form_row(form.poster) }}
+            {{ form_row(form.category) }}
+
+            <button type="submit" class="btn btn-primary">
+                Enregistrer les modifications
+            </button>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}
