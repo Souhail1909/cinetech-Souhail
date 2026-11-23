@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil — CinéTech{% endblock %}
+
+{% block body %}
+    <h1>Bienvenue sur CinéTech</h1>
+
+    <p>Votre plateforme de découverte de films.</p>
+
+    <a href="{{ path('app_movie_index') }}">
+        Voir le catalogue
+    </a>
+{% endblock %}
